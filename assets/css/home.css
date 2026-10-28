@@ -1,0 +1,378 @@
+
+/* HERO - BANNER TRANG CHỦ */
+
+.hero {
+    background: #111;
+    color: white;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient( 90deg, #101010 20%, #101010cc 55%, #10101055 ), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80') center / cover;
+    }
+
+    .hero .container {
+        position: relative;
+        width: 100%;
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 58px);
+    max-width: 750px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin: 18px 0;
+}
+
+.hero p {
+    color: #ddd;
+    max-width: 570px;
+    line-height: 1.8;
+}
+
+/* THANH TÌM KIẾM TRONG BANNER */
+
+.searchbar {
+    background: white;
+    color: #111;
+    display: flex;
+    max-width: 730px;
+    margin-top: 28px;
+    padding: 6px;
+    gap: 6px;
+}
+
+    .searchbar input {
+        flex: 1;
+        min-width: 0;
+        border: 0;
+        padding: 14px;
+        outline: none;
+    }
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+    .hero {
+        min-height: 320px;
+    }
+
+        .hero h1 {
+            letter-spacing: -1px;
+        }
+
+    .searchbar {
+        flex-direction: column;
+    }
+}
+
+/* =====================================
+   PHÒNG MỚI NHẤT
+===================================== */
+
+.section {
+    padding: 54px 0;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+    .section-title::before,
+    .section-title::after {
+        content: "";
+        height: 1px;
+        background: #ddd;
+        flex: 1;
+    }
+
+    .section-title h2 {
+        font-size: clamp(22px, 3vw, 37px);
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+/* LƯỚI PHÒNG */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    min-width: 0;
+}
+
+/* ẢNH PHÒNG */
+
+.card-img {
+    display: block;
+    aspect-ratio: 1.25;
+    overflow: hidden;
+    background: #eee;
+    position: relative;
+}
+
+    .card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .35s;
+    }
+
+.card:hover img {
+    transform: scale(1.035);
+}
+
+/* TRẠNG THÁI PHÒNG */
+
+.tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #111;
+    color: white;
+    font-size: 10px;
+    padding: 7px 10px;
+    letter-spacing: .5px;
+}
+
+    .tag.sold {
+        background: #777;
+    }
+
+/* THÔNG TIN PHÒNG */
+
+.card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 12px 0 6px;
+    line-height: 1.45;
+}
+
+.card .meta {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.card .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card .price {
+    font-size: 16px;
+    font-weight: 800;
+    margin-top: 9px;
+}
+
+.price-unit {
+    font-size: 11px;
+    font-weight: 400;
+    color: #777;
+}
+
+
+/* =====================================
+   NÚT YÊU CẦU TƯ VẤN
+===================================== */
+
+.room-consult {
+    display: block;
+    width: 100%;
+    margin-top: 14px;
+    padding: 12px 10px;
+    background: #151515;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+    .room-consult:hover {
+        background: #444444;
+        color: #ffffff;
+    }
+
+    .room-consult:focus-visible {
+        outline: 2px solid #777;
+        outline-offset: 3px;
+    }
+
+
+/* NÚT XEM TẤT CẢ */
+
+.section-foot {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.btn.light {
+    background: white;
+    color: #151515;
+    border-color: #d5d5d5;
+}
+
+    .btn.light:hover {
+        background: #eee;
+    }
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .section {
+        padding: 36px 0;
+    }
+
+    .section-title {
+        gap: 8px;
+    }
+
+        .section-title h2 {
+            font-size: 22px;
+        }
+
+    .cards {
+        gap: 14px;
+    }
+
+    .card h3 {
+        font-size: 13px;
+    }
+
+    .card .price {
+        font-size: 14px;
+    }
+
+    .card .meta {
+        font-size: 11px;
+    }
+}
+
+/* =====================================
+   KHÁM PHÁ THEO NHU CẦU
+===================================== */
+
+.category-section {
+    background: #fafafa;
+}
+
+.category {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+    .category a {
+        min-height: 155px;
+        background: #f2f2f2;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        border: 1px solid #eee;
+    }
+
+    .category strong {
+        font-size: 22px;
+    }
+
+    .category span {
+        font-size: 12px;
+        color: #777;
+        margin-top: 8px;
+    }
+
+@media (max-width: 700px) {
+    .category {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================
+   DỰ ÁN NỔI BẬT
+===================================== */
+
+.projectcards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.projectcard {
+    border: 1px solid #eee;
+}
+
+    .projectcard img {
+        width: 100%;
+        aspect-ratio: 1.5;
+        object-fit: cover;
+        display: block;
+    }
+
+    .projectcard > div {
+        padding: 18px;
+    }
+
+    .projectcard h3 {
+        margin: 0 0 10px;
+    }
+
+    .projectcard p {
+        color: #777;
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+.btn.small {
+    padding: 8px 12px;
+    font-size: 12px;
+}
+
+@media (max-width: 950px) {
+    .projectcards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .projectcards {
+        grid-template-columns: 1fr;
+    }
+}

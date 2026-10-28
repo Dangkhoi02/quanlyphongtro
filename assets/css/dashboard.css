@@ -1,0 +1,343 @@
+﻿
+/* ==========================================
+   HB HOME - DASHBOARD CSS
+   Tran Dang Gia Bao
+========================================== */
+
+/* DAM BA PHAN TU HIDDEN KHONG HIEN */
+
+[hidden] {
+    display: none !important;
+}
+
+/* BO CUC ADMIN */
+
+.hb-admin-layout {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    min-height: 100vh;
+    background: #f7f7f7;
+}
+
+/* SIDEBAR */
+
+.hb-admin-sidebar {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: #151515;
+    color: white;
+    padding: 30px 22px;
+}
+
+.hb-admin-logo {
+    display: block;
+    text-align: center;
+    font-family: "UnifrakturCook", serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 48px;
+}
+
+.hb-sidebar-caption {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 0 0 20px;
+}
+
+.hb-sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+    .hb-sidebar-menu a,
+    .hb-sidebar-menu > span {
+        display: block;
+        padding: 15px;
+        color: #eee;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+        .hb-sidebar-menu a:hover {
+            background: #333;
+        }
+
+        .hb-sidebar-menu a.active {
+            background: #fff;
+            color: #151515;
+        }
+
+    .hb-sidebar-menu small {
+        display: block;
+        margin-top: 5px;
+        color: #999;
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+.hb-logout-button {
+    margin-top: 28px;
+    padding: 15px;
+    border: 1px solid #666;
+    background: transparent;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+    .hb-logout-button:hover {
+        background: white;
+        color: #151515;
+    }
+
+.hb-sidebar-footer {
+    margin-top: auto;
+    padding-top: 35px;
+    color: #777;
+    font-size: 10px;
+}
+
+/* NOI DUNG BEN PHAI */
+
+.hb-admin-main {
+    min-width: 0;
+    padding: 45px 42px;
+}
+
+.hb-dashboard-notice {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* TIEU DE */
+
+.hb-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.hb-eyebrow {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #777;
+}
+
+.hb-dashboard-header h1 {
+    margin: 10px 0;
+    font-size: 36px;
+}
+
+.hb-welcome {
+    font-size: 13px;
+    color: #777;
+}
+
+.hb-role-box {
+    padding: 18px 22px;
+    border: 1px solid #e5e5e5;
+    background: white;
+    min-width: 185px;
+}
+
+    .hb-role-box span {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 10px;
+        font-weight: 700;
+        color: #777;
+    }
+
+    .hb-role-box strong {
+        font-size: 14px;
+    }
+
+/* PHAM VI */
+
+.hb-scope-box {
+    padding: 22px;
+    background: white;
+    border-left: 4px solid #151515;
+}
+
+    .hb-scope-box h2 {
+        margin: 0 0 10px;
+        font-size: 13px;
+    }
+
+    .hb-scope-box p {
+        margin: 0;
+        font-size: 13px;
+        color: #555;
+    }
+
+.hb-demo-notice {
+    margin: 20px 0 30px;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* THE THONG KE */
+
+.hb-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.hb-stat-card {
+    background: white;
+    border: 1px solid #e5e5e5;
+    padding: 24px;
+}
+
+    .hb-stat-card p {
+        font-size: 11px;
+        color: #777;
+        font-weight: 700;
+        margin: 0 0 20px;
+    }
+
+    .hb-stat-card strong {
+        font-size: 36px;
+    }
+
+/* THE CHUC NANG */
+
+.hb-module-section {
+    margin-top: 40px;
+}
+
+    .hb-module-section > h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+.hb-module-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.hb-module {
+    background: white;
+    border: 1px solid #e5e5e5;
+    padding: 25px;
+}
+
+    .hb-module h3 {
+        margin: 0 0 12px;
+        font-size: 17px;
+    }
+
+    .hb-module > p {
+        color: #777;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+.hb-module-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 13px 16px;
+    background: #151515;
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+    .hb-module-link:hover {
+        background: #444;
+    }
+
+/* CHUC NANG SAP TRIỂN KHAI */
+
+.hb-feature-pending {
+    margin-top: 18px;
+    padding: 15px;
+    border: 1px dashed #bbb;
+    background: #fafafa;
+}
+
+    .hb-feature-pending strong {
+        display: block;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .hb-feature-pending span {
+        display: block;
+        font-size: 12px;
+        color: #777;
+        line-height: 1.7;
+    }
+
+.hb-pending-note {
+    font-size: 11px !important;
+    color: #999 !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+
+    .hb-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 800px) {
+
+    .hb-admin-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hb-admin-sidebar {
+        padding: 22px;
+    }
+
+    .hb-admin-logo {
+        margin-bottom: 20px;
+    }
+
+    .hb-sidebar-footer {
+        margin-top: 15px;
+    }
+
+    .hb-admin-main {
+        padding: 25px 18px;
+    }
+
+    .hb-module-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .hb-dashboard-header {
+        flex-direction: column;
+    }
+
+    .hb-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .hb-role-box {
+        width: 100%;
+    }
+}

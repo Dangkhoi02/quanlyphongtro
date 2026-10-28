@@ -1,0 +1,215 @@
+
+/* ========================================
+   HB HOME - DANH SÁCH PHÒNG
+   Phụ trách: Nguyễn Đăng Khôi
+======================================== */
+
+/* KHU VỰC TRANG */
+
+.rooms-page {
+    padding-bottom: 35px;
+}
+
+    .rooms-page .pagehead {
+        padding: 45px 0 20px;
+    }
+
+        .rooms-page .pagehead h1 {
+            font-size: 36px;
+            margin: 0 0 12px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+    .rooms-page .subtle {
+        color: #777;
+    }
+
+/* CHIA BỐ CỤC FILTER VÀ DANH SÁCH */
+
+.rooms-layout {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 35px;
+    align-items: start;
+}
+
+/* BỘ LỌC BÊN TRÁI */
+
+.filters {
+    border: 1px solid #e8e8e8;
+    padding: 22px;
+    background: #fff;
+}
+
+    .filters h2 {
+        margin: 0 0 22px;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+    }
+
+    .filters .field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 17px;
+    }
+
+        .filters .field label {
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .filters .field input,
+        .filters .field select {
+            width: 100%;
+            min-height: 43px;
+            border: 1px solid #d6d6d6;
+            background: #fff;
+            padding: 10px 12px;
+            border-radius: 0;
+            color: #151515;
+            outline: none;
+        }
+
+            .filters .field input:focus,
+            .filters .field select:focus {
+                border-color: #111;
+            }
+
+/* NÚT LỌC */
+
+.filter-submit {
+    width: 100%;
+    min-height: 44px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.filter-reset {
+    width: 100%;
+    margin-top: 10px;
+    padding: 11px;
+    background: white;
+    color: #555;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+    .filter-reset:hover {
+        background: #f4f4f4;
+    }
+
+/* DANH SÁCH KẾT QUẢ */
+
+.rooms-results {
+    min-width: 0;
+}
+
+.listhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+    .listhead p {
+        margin: 0;
+    }
+
+.sort-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .sort-control label {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .sort-control select {
+        padding: 10px;
+        border: 1px solid #ddd;
+        background: white;
+    }
+
+/* TÁI SỬ DỤNG .card TRONG HOME.CSS */
+
+.rooms-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+    /* NÚT TƯ VẤN PHÒNG */
+
+    .rooms-cards .room-consult {
+        display: block;
+        margin-top: 14px;
+        padding: 11px 8px;
+        background: #151515;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+    }
+
+        .rooms-cards .room-consult:hover {
+            background: #444;
+        }
+
+/* KHÔNG CÓ KẾT QUẢ */
+
+.empty-message {
+    border: 1px dashed #ccc;
+    padding: 35px 20px;
+    text-align: center;
+    color: #777;
+    line-height: 1.7;
+}
+
+    .empty-message[hidden] {
+        display: none;
+    }
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+    .rooms-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+
+    .rooms-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .rooms-page .pagehead {
+        padding: 28px 0 18px;
+    }
+
+        .rooms-page .pagehead h1 {
+            font-size: 28px;
+        }
+
+    .filters {
+        padding: 16px;
+    }
+
+    .listhead {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .rooms-cards {
+        grid-template-columns: 1fr;
+    }
+}

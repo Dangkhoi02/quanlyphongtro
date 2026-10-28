@@ -1,0 +1,238 @@
+﻿
+/* =========================================
+   HB HOME - FORM ADMIN
+   Dung chung cho Them du an va Them phong
+========================================= */
+
+.admin-form-page {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.form-page-title {
+    margin-bottom: 25px;
+}
+
+    .form-page-title h1 {
+        margin: 8px 0 10px;
+        font-size: 32px;
+    }
+
+.admin-muted {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.form-panel {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 28px;
+    margin-bottom: 28px;
+}
+
+    .form-panel h2 {
+        font-size: 21px;
+        margin: 0 0 22px;
+    }
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-field {
+    min-width: 0;
+}
+
+.form-full {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 11px 12px;
+    background: #fff;
+    border: 1px solid #d4d4d4;
+    border-radius: 0;
+    color: #151515;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.form-field textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+        outline: 1px solid #151515;
+    }
+
+.form-field input:disabled,
+.form-field select:disabled {
+    background: #f3f3f3;
+    color: #666;
+}
+
+.form-hint {
+    margin: 8px 0 0;
+    font-size: 11px;
+    color: #888;
+    line-height: 1.7;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.form-submit {
+    min-height: 45px;
+    padding: 0 24px;
+    background: #151515;
+    border: 1px solid #151515;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+    .form-submit:hover {
+        background: #444;
+    }
+
+    .form-submit:disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+    }
+
+.form-reset {
+    min-height: 45px;
+    padding: 0 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #151515;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.form-message {
+    min-height: 20px;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #18603b;
+    line-height: 1.7;
+}
+
+    .form-message.error {
+        color: #ae2828;
+    }
+
+.admin-access-denied {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 35px;
+    margin-top: 25px;
+}
+
+    .admin-access-denied h2 {
+        margin-top: 0;
+    }
+
+.admin-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.admin-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+    .admin-data-table th {
+        text-align: left;
+        color: #777;
+        background: #f6f6f6;
+        font-size: 11px;
+        padding: 14px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .admin-data-table td {
+        padding: 14px;
+        border-bottom: 1px solid #ededed;
+        vertical-align: middle;
+    }
+
+        .admin-data-table td.wrap-cell {
+            white-space: normal;
+            min-width: 180px;
+        }
+
+.admin-pill {
+    display: inline-block;
+    padding: 6px 10px;
+    background: #151515;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+    .admin-pill.is-muted {
+        background: #777;
+    }
+
+.form-link {
+    display: inline-block;
+    color: #151515;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.form-stat {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 8px 12px;
+    background: #f1f1f1;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+@media (max-width: 700px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-panel {
+        padding: 19px;
+    }
+
+    .form-page-title h1 {
+        font-size: 27px;
+    }
+
+    .form-actions button {
+        flex: 1;
+    }
+}

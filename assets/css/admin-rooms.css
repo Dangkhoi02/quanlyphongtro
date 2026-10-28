@@ -1,0 +1,185 @@
+﻿
+/* =========================================
+   HB HOME - QUAN LY PHONG ADMIN
+   Nguyen Dang Khoi
+========================================= */
+
+[hidden] {
+    display: none !important;
+}
+
+/* PHAN DAU TRANG */
+
+.room-admin-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+    .room-admin-heading h1 {
+        margin: 8px 0 10px;
+    }
+
+.room-admin-create {
+    display: inline-block;
+    flex-shrink: 0;
+    padding: 14px 19px;
+    background: #151515;
+    border: 1px solid #151515;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+    .room-admin-create:hover {
+        background: #444;
+        color: white;
+    }
+
+/* THONG KE */
+
+.room-admin-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.room-stat-card {
+    background: white;
+    border: 1px solid #e5e5e5;
+    padding: 23px;
+}
+
+    .room-stat-card p {
+        color: #777;
+        font-size: 11px;
+        font-weight: 700;
+        margin: 0 0 16px;
+    }
+
+    .room-stat-card strong {
+        font-size: 35px;
+    }
+
+/* BO LOC */
+
+.room-admin-filters {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr auto;
+    gap: 15px;
+    align-items: end;
+}
+
+.room-filter-actions {
+    padding-bottom: 0;
+}
+
+    .room-filter-actions .form-reset {
+        white-space: nowrap;
+    }
+
+/* BANG KET QUA */
+
+.room-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+    .room-list-header h2 {
+        margin-bottom: 12px;
+    }
+
+.room-admin-table {
+    min-width: 1120px;
+}
+
+    .room-admin-table td {
+        line-height: 1.6;
+    }
+
+    .room-admin-table .room-name-cell {
+        min-width: 180px;
+        max-width: 250px;
+        white-space: normal;
+        font-weight: 600;
+    }
+
+    .room-admin-table .room-price-cell {
+        font-weight: 700;
+    }
+
+.room-admin-select {
+    width: 165px;
+    max-width: 100%;
+    padding: 9px 10px;
+    border: 1px solid #d2d2d2;
+    background: #fff;
+    color: #151515;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+    .room-admin-select:focus {
+        outline: 1px solid #151515;
+    }
+
+.room-sale-label {
+    color: #666;
+    font-size: 12px;
+}
+
+.room-admin-empty {
+    margin: 25px 0 0;
+    padding: 22px;
+    background: #f7f7f7;
+    color: #777;
+    text-align: center;
+    font-size: 13px;
+}
+
+.room-updated {
+    color: #777;
+    font-size: 11px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .room-admin-filters {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .room-admin-stats {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .room-admin-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .room-admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .room-admin-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .room-filter-actions .form-reset {
+        width: 100%;
+    }
+
+    .room-list-header {
+        flex-wrap: wrap;
+    }
+}
